@@ -8,3 +8,4 @@ nodes:
   - role: worker
     image: kindest/node:v1.32.0
 
+# kind create cluster --config <your_file_name>.yaml --name <name_for_cluster>
