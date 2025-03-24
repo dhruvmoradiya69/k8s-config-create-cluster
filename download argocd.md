@@ -25,7 +25,7 @@ rm argocd-linux-amd64
 By default, ArgoCD runs on a specific internal port. To make it accessible externally, modify the `argocd-server` service to use a `NodePort` type and assign a specific external port:
 
 ```sh
-kubectl patch svc argocd-server -n argocd -p '{"spec": {"type": "NodePort", "ports": [{"port": 443, "targetPort": 8081, "nodePort": 30005}]}}'
+kubectl patch svc argocd-server -n argocd -p '{"spec": {"type": "NodePort", "ports": [{"port": 443, "targetPort": 443, "nodePort": 30005}]}}'
 ```
 
 ## Retrieve ArgoCD Initial Admin Password
